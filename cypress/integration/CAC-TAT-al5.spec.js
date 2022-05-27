@@ -1,12 +1,10 @@
 /// <reference types="Cypress" />
 
 describe('Central de Atendimento ao Cliente TAT', function() {
-
-    beforeEach(function(){
-        cy.visit('./src/index.html')
-    })
-    
+  
     it('marca ambos checkboxes, depois desmarca o último', function() {
+        cy.visit('./src/index.html')
+
         cy.get('input[type="checkbox"]')
           .check()
           .should('be.checked')
